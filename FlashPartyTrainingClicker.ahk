@@ -1,4 +1,7 @@
-﻿#SingleInstance Force
+﻿#SingleInstance
+
+ResetButtonXPos = 1583
+ResetButtonYPos = 95
 
 ; Set the desired hotkey, this case, "Select" button
 Joy7::
@@ -7,8 +10,8 @@ Joy7::
     If WinActive("ahk_exe FlashParty.exe")
     {
         ; Move the mouse to the specified coordinates (reset position button), and click
-        MouseMove, 1571, 87, 0
-		Click
+        MouseClick, left, %ResetButtonXPos%, %ResetButtonYPos%, 1, 1
+	  Click, %ResetButtonXPos% %ResetButtonYPos%
     }
     ; If the active window doesn't match, do nothing or add any desired alternative action here
 }
